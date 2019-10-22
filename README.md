@@ -1,7 +1,7 @@
 # NodeP1
 fetches data from a url
 
-demonstrates writing to file and cors
+demonstrates writing to file and cors, html templating
 
 npm i D chai
 
