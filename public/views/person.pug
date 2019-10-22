@@ -1,0 +1,22 @@
+html
+    link(rel="stylesheet",href="../css/bootstrap.min.css")
+    script(src="../jquery.min.js")
+    script(src="../js/bootstrap.min.js")
+    head
+        title pug document
+    body
+        h1 Shirdi Deva
+        div.jumbotron
+            table.table.table-striped
+                thead
+                    th SerialNum
+                    th Name
+                    th City
+                tbody
+                    each x in person1
+                        tr
+                            td= x.snum
+                            td= x.name
+                            td= x.town
+
+            h3.alert.alert-dark Programmed by #{developer}
