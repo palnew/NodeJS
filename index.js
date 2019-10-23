@@ -10,14 +10,14 @@ app.use(express.static(path.join(__dirname, "public/scripts")));
 app.use(express.static(path.join(__dirname, "node_modules/jquery/dist")));
 app.use(express.static(path.join(__dirname, "node_modules/bootstrap/dist")));
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 
 app.use(bodyParser.urlencoded());
 //bodyParser.json
@@ -69,9 +69,10 @@ app.get("/showpeople", function(request, response) {
 });
 
 app.post("/storeperson", (request, response) => {
-  let sno = request.body.sno;
+  let sno = request.body.snum;
   let name = request.body.name;
-  let city = request.body.city;
+  let city = request.body.town;
+  console.log("SNO " + sno);
 
   fs.readFile("files/data.json", "utf8", function(err, data) {
     if (err) response.sendStatus(500);
