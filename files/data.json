@@ -1,1 +1,4 @@
-[{"sno":"24","name":"jeet","city":"chandigarh"}]
+[
+  { "sno": "24", "name": "jeet", "city": "chandigarh" },
+  { "sno": "4", "name": "Palaniappan", "city": "CHENNAI" }
+]
